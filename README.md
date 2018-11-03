@@ -1,8 +1,6 @@
 # TestSuite
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/test_suite`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This Test suite represents a several methods, that allows you to do next things with your objects - check the type, make a conversions and work with hashes.
 
 ## Installation
 
@@ -22,7 +20,37 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+For using test_suite gem in your application you have to require it and call it (where you want) with next command -TestSuite.name_of_method(parameter). You can use next methods:
+-hash?
+-array?
+-number?
+-string?
+-symbol?
+-hash_empty?
+-hash_value_greater_nil?
+-hash_has_two_keys?
+-to_s
+-to_i
+-to_sym
+-str_to_arr
+
+In parameter you can use whatever you want.
+
+## Example
+
+module Tasks
+  def self.math2(x, y)
+    s = ((x.abs - y.abs) / (1 + (x * y).abs)).round(4)
+    { result: s }
+  end
+end
+
+TestSuite.hash_has_two_keys?(Tasks.math2(-6.0, -2))
+
+Сonsole output:
+
+Hash has one key
+Hash key(s): [:result]
 
 ## Development
 
