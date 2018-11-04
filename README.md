@@ -20,40 +20,49 @@ Or install it yourself as:
 
 ## Usage
 
-For using test_suite gem in your application you have to require it and call it (where you want) with next command -TestSuite.name_of_method(parameter). List of methods below.
+For using test_suite gem in your application you have to require it and call it (where you want) with next command - TestSuite.name _of _method(parameter). You can use this methods:
 
-hash?
-array?
-number?
-string?
-symbol?
-hash_empty?
-hash_value_greater_nil?
-hash_has_two_keys?
-to_s
-to_i
-to_sym
-str_to_arr
+- hash?
+
+- array?
+
+- number?
+
+- string?
+ 
+- symbol?
+
+- hash_empty?
+
+- hash_value_greater_nil?
+
+- hash_has_two_keys?
+
+- to_s
+
+- to_i
+
+- to_sym
+
+- str_ to_arr
 
 In parameter you can use whatever you want.
 
 ## Example
 
-module Tasks
+    module Tasks
+      def self.math2(x, y)
+        s = ((x.abs - y.abs) / (1 + (x * y).abs)).round(4)
+        { result: s }
+      end
+    end 
 
-def self.math2(x, y)
-s = ((x.abs - y.abs) / (1 + (x * y).abs)).round(4)
-{ result: s }
-end
-
-end
-
-TestSuite.hash_has_two_keys?(Tasks.math2(-6.0, -2))
+    TestSuite.hash_has_two_keys?(Tasks.math2(-6.0, -2))
 
 Сonsole output:
 
-Hash has one key
-Hash key(s): [:result]
+    Hash has one key
+    Hash key(s): [:result]
 
 ## Development
 
