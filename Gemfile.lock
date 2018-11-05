@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    test_suite (0.1.0)
+    test_suite (0.1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -32,4 +32,4 @@ DEPENDENCIES
   test_suite!
 
 BUNDLED WITH
-   1.16.4
+   1.16.6
